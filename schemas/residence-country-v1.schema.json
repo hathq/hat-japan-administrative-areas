@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"hathq://hat-japan-administrative-areas/residence-country/v1","type":"object","additionalProperties":false,"required":["country_region"],"properties":{"country_region":{"const":"JP"}}}

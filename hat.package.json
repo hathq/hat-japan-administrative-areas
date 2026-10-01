@@ -1,0 +1,155 @@
+{
+  "schema": "hathq://hat/package/v2",
+  "package_id": "hat/japan-administrative-areas",
+  "repository_id": "hat-japan-administrative-areas",
+  "version": "0.10.0",
+  "specification_version": "1.0.0",
+  "manifest": {
+    "schema": "hathq://hat/manifest/v1",
+    "id": "hat/japan-administrative-areas",
+    "name": "Japan Administrative Areas",
+    "version": "0.10.0",
+    "capabilities": [
+      "list-japan-administrative-areas",
+      "validate-japan-administrative-area"
+    ],
+    "decision_boundaries": [
+      "exact-administrative-area-only"
+    ],
+    "input_classifications": [
+      "public"
+    ],
+    "output_classification": "public",
+    "permissions": [
+      {
+        "resource": "administrative-area-reference-data",
+        "operations": [
+          "list-records"
+        ],
+        "mode": "observe"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "id": "hathq://vocabulary/action/list-administrative-areas/v1",
+      "input_schema": "hathq://hat-japan-administrative-areas/list-administrative-areas-input/v1",
+      "output_schema": "hathq://hat-japan-administrative-areas/list-administrative-areas-output/v1",
+      "context_plan": {
+        "id": "list-administrative-areas-context",
+        "selectors": [
+          {
+            "namespace": "residence-profile",
+            "projection_schema": "hathq://hat-japan-administrative-areas/residence-country/v1",
+            "required": true
+          }
+        ],
+        "unresolved_policy": "record-unresolved"
+      },
+      "reducer": {
+        "id": "list-administrative-areas-reducer",
+        "strategy": "typed-domain-event",
+        "event_schema": "hathq://hat-japan-administrative-areas/administrative-area-selection-event/v1",
+        "projection_schema": "hathq://hat-japan-administrative-areas/administrative-area-selection-projection/v1",
+        "conflict_policy": "reject"
+      },
+      "procedure": {
+        "id": "list-administrative-areas-procedure",
+        "steps": [
+          {
+            "action_id": "hathq://vocabulary/action/list-administrative-areas/v1",
+            "input_schema": "hathq://hat-japan-administrative-areas/list-administrative-areas-input/v1",
+            "output_schema": "hathq://hat-japan-administrative-areas/list-administrative-areas-output/v1"
+          }
+        ]
+      },
+      "handler": {
+        "kind": "declarative-hat",
+        "reference": "list-administrative-areas-procedure"
+      }
+    }
+  ],
+  "catalog": {
+    "schema": "hathq://hat/semantic-catalog/v1",
+    "identity": {
+      "catalog_id": "hat-japan-administrative-areas",
+      "version": 1,
+      "digest_sha256": "f482e8cb2ac3fdee94f221cb632b357d177dd6e709a82415a75916fc2a918a2e"
+    },
+    "owner_repository_id": "hat-japan-administrative-areas",
+    "foundation": false,
+    "dependencies": [
+      {
+        "catalog_id": "hathq.foundation",
+        "version": 1,
+        "digest_sha256": "6b618dff030e551bafd6b1a70fe6daf71e2873de9c2230f4cf71e9ac9fbf2c0f"
+      }
+    ],
+    "incompatibilities": [],
+    "terms": [
+      {
+        "reference": {
+          "catalog_id": "hat-japan-administrative-areas",
+          "catalog_digest_sha256": "f482e8cb2ac3fdee94f221cb632b357d177dd6e709a82415a75916fc2a918a2e",
+          "term_id": "hathq://vocabulary/entity/administrative-area/v1",
+          "version": 1,
+          "definition_digest_sha256": "6e1063653ed741bcd415b3927eadf4cafa842b259d273e52a5b8df05c68b497f",
+          "kind": "entity-type"
+        },
+        "wire_schema": "hathq://hat-japan-administrative-areas/administrative-area/v1",
+        "semantic_icon": "generic",
+        "dependencies": [],
+        "is_a": [],
+        "domain": [],
+        "range": []
+      },
+      {
+        "reference": {
+          "catalog_id": "hat-japan-administrative-areas",
+          "catalog_digest_sha256": "f482e8cb2ac3fdee94f221cb632b357d177dd6e709a82415a75916fc2a918a2e",
+          "term_id": "hathq://vocabulary/action/list-administrative-areas/v1",
+          "version": 1,
+          "definition_digest_sha256": "689850cc505c13e9958e685b90771a6dd43b155702899384ce81d3fd744f7f74",
+          "kind": "action"
+        },
+        "wire_schema": "hathq://hat-japan-administrative-areas/list-administrative-areas-input/v1",
+        "semantic_icon": "generic",
+        "dependencies": [],
+        "is_a": [],
+        "domain": [],
+        "range": []
+      }
+    ],
+    "lexicalizations": [],
+    "frames": [
+      {
+        "frame_id": "list-administrative-areas-procedure-frame",
+        "definition_digest_sha256": "ba6dc5c9caaed6fd73b76c32901669183b9b4b3bc3d757ee5b35e406d1d13cc1",
+        "predicate": {
+          "catalog_id": "hat-japan-administrative-areas",
+          "catalog_digest_sha256": "f482e8cb2ac3fdee94f221cb632b357d177dd6e709a82415a75916fc2a918a2e",
+          "term_id": "hathq://vocabulary/action/list-administrative-areas/v1",
+          "version": 1,
+          "definition_digest_sha256": "689850cc505c13e9958e685b90771a6dd43b155702899384ce81d3fd744f7f74",
+          "kind": "action"
+        },
+        "roles": [
+          {
+            "role": "actor",
+            "required": true,
+            "accepted_kinds": [
+              "entity-type"
+            ]
+          },
+          {
+            "role": "object",
+            "required": true,
+            "accepted_kinds": [
+              "concept"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
