@@ -40,3 +40,9 @@ cargo test --locked
 [Usage guide](docs/getting-started.md)
 
 [Schemas](schemas) · [Implementation and public interfaces](src) · [Verification cases](tests) · [Contributing](CONTRIBUTING.md) · [Security reporting](SECURITY.md) · [License](LICENSE) · [Attribution notices](NOTICE)
+
+## Generic data dependency
+
+The subdivision codes and names resolve from `zixcel-japan-administrative-areas`
+`0.1.0` on crates.io. This product retains the HAT invocation, explicit country
+selection and unresolved-input behavior; it no longer duplicates the dataset.

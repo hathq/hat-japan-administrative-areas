@@ -1,21 +1,12 @@
 #![forbid(unsafe_code)]
 
-mod areas;
-
-pub use areas::ADMINISTRATIVE_AREAS;
+pub use zixcel_japan_administrative_areas::{ADMINISTRATIVE_AREAS, AdministrativeArea};
 
 pub const PACKAGE_JSON: &str = include_str!("../hat.package.json");
 pub const PACKAGE_ID: &str = "hat/japan-administrative-areas";
 pub const REPOSITORY_ID: &str = "hat-japan-administrative-areas";
 pub const COUNTRY_CODE: &str = "JP";
 pub const OPERATION_ID: &str = "hathq://vocabulary/action/list-administrative-areas/v1";
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub struct AdministrativeArea {
-    pub code: &'static str,
-    pub name_ja: &'static str,
-    pub name_en: &'static str,
-}
 
 #[must_use]
 pub fn list_for_country(country_code: &str) -> Option<&'static [AdministrativeArea]> {

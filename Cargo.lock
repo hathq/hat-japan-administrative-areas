@@ -77,6 +77,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2",
+ "zixcel-japan-administrative-areas",
 ]
 
 [[package]]
@@ -305,6 +306,12 @@ checksum = "df79d97927682d2fd8adb29682d1140b343be4ac0f08fd68b7765d9c059d3945"
 dependencies = [
  "memchr",
 ]
+
+[[package]]
+name = "zixcel-japan-administrative-areas"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e5a1cd3309bd65710e343a77328eb8314ceef111e417d4de4479cb62f933487f"
 
 [[package]]
 name = "zixcel-revision"
