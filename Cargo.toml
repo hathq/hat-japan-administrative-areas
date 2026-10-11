@@ -12,6 +12,7 @@ name = "hat-japan-administrative-areas-worker"
 path = "src/main.rs"
 
 [dependencies]
+zixcel-japan-administrative-areas = "=0.1.0"
 hat-specifications = { version = "=0.10.0" }
 hex = "0.4.3"
 serde = { version = "1.0.229", features = ["derive"] }
