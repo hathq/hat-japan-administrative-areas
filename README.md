@@ -29,7 +29,7 @@ Package distribution is not activated by this documentation. Use the checked-in 
 
 ## Getting started
 
-Install Rust 1.97 or newer and make the declared dependencies available. Use the configured private registry when a dependency is not distributed publicly. Run from this repository:
+Install Rust 1.97 or newer and make the declared dependencies available. Resolve declared third-party dependencies from public registries and source-only managed components from their fixed public Git revision. No private registry or adjacent checkout is part of the supported OSS source path. Run from this repository:
 
 ```sh
 cargo test --locked
@@ -46,3 +46,5 @@ cargo test --locked
 The subdivision codes and names resolve from `zixcel-japan-administrative-areas`
 `0.1.0` on crates.io. This product retains the HAT invocation, explicit country
 selection and unresolved-input behavior; it no longer duplicates the dataset.
+
+[OSS responsibility and source completion](docs/oss-source-contract.md) defines the supported package boundary and required acceptance. It does not declare unexecuted source, distribution or production checks complete.
