@@ -50,3 +50,5 @@ selection and unresolved-input behavior; it no longer duplicates the dataset.
 [OSS responsibility and source completion](docs/oss-source-contract.md) defines the supported package boundary and required acceptance. It does not declare unexecuted source, distribution or production checks complete.
 
 Dependency updates: [repository policy](docs/dependency-updates.md).
+
+[Independent HAT build and release](docs/hat-release.md).
