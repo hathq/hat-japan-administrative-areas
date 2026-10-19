@@ -74,7 +74,7 @@
     "identity": {
       "catalog_id": "hat-japan-administrative-areas",
       "version": 1,
-      "digest_sha256": "f482e8cb2ac3fdee94f221cb632b357d177dd6e709a82415a75916fc2a918a2e"
+      "digest_sha256": "32e7a62e6a1d421f6c3edfe53c31f6a43970763eb7bf40bdbc2161c5ef99c102"
     },
     "owner_repository_id": "hat-japan-administrative-areas",
     "foundation": false,
@@ -82,7 +82,7 @@
       {
         "catalog_id": "hathq.foundation",
         "version": 1,
-        "digest_sha256": "6b618dff030e551bafd6b1a70fe6daf71e2873de9c2230f4cf71e9ac9fbf2c0f"
+        "digest_sha256": "7ed387a86fe00a320784c181a2128da856ccb3e5e3930040ca39d9f5b627a465"
       }
     ],
     "incompatibilities": [],
@@ -90,7 +90,7 @@
       {
         "reference": {
           "catalog_id": "hat-japan-administrative-areas",
-          "catalog_digest_sha256": "f482e8cb2ac3fdee94f221cb632b357d177dd6e709a82415a75916fc2a918a2e",
+          "catalog_digest_sha256": "32e7a62e6a1d421f6c3edfe53c31f6a43970763eb7bf40bdbc2161c5ef99c102",
           "term_id": "hathq://vocabulary/entity/administrative-area/v1",
           "version": 1,
           "definition_digest_sha256": "6e1063653ed741bcd415b3927eadf4cafa842b259d273e52a5b8df05c68b497f",
@@ -106,7 +106,7 @@
       {
         "reference": {
           "catalog_id": "hat-japan-administrative-areas",
-          "catalog_digest_sha256": "f482e8cb2ac3fdee94f221cb632b357d177dd6e709a82415a75916fc2a918a2e",
+          "catalog_digest_sha256": "32e7a62e6a1d421f6c3edfe53c31f6a43970763eb7bf40bdbc2161c5ef99c102",
           "term_id": "hathq://vocabulary/action/list-administrative-areas/v1",
           "version": 1,
           "definition_digest_sha256": "689850cc505c13e9958e685b90771a6dd43b155702899384ce81d3fd744f7f74",
@@ -120,36 +120,6 @@
         "range": []
       }
     ],
-    "lexicalizations": [],
-    "frames": [
-      {
-        "frame_id": "list-administrative-areas-procedure-frame",
-        "definition_digest_sha256": "ba6dc5c9caaed6fd73b76c32901669183b9b4b3bc3d757ee5b35e406d1d13cc1",
-        "predicate": {
-          "catalog_id": "hat-japan-administrative-areas",
-          "catalog_digest_sha256": "f482e8cb2ac3fdee94f221cb632b357d177dd6e709a82415a75916fc2a918a2e",
-          "term_id": "hathq://vocabulary/action/list-administrative-areas/v1",
-          "version": 1,
-          "definition_digest_sha256": "689850cc505c13e9958e685b90771a6dd43b155702899384ce81d3fd744f7f74",
-          "kind": "action"
-        },
-        "roles": [
-          {
-            "role": "actor",
-            "required": true,
-            "accepted_kinds": [
-              "entity-type"
-            ]
-          },
-          {
-            "role": "object",
-            "required": true,
-            "accepted_kinds": [
-              "concept"
-            ]
-          }
-        ]
-      }
-    ]
+    "lexicalizations": []
   }
 }
