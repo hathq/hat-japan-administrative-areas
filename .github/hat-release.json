@@ -2,5 +2,10 @@
   "repository": "hathq/hat-japan-administrative-areas",
   "github_id": 1400278166,
   "package_id": "hat/japan-administrative-areas",
-  "binary": "hat-japan-administrative-areas-worker"
+  "binary": "hat-japan-administrative-areas-worker",
+  "required_workflows": [
+    ".github/workflows/oss-policy.yml",
+    ".github/workflows/public-dependencies.yml",
+    ".github/workflows/release-hat.yml"
+  ]
 }
